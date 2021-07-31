@@ -1,0 +1,6 @@
+*.csv
+/neo4j
+/__pycache__/
+.vscode
+/data/
+/backup/
