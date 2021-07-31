@@ -8,13 +8,14 @@ Created on Sun Jun  6 10:22:06 2021
 # Criar registro numa tabela
 # Create (p:Person {name: 'John Doe'}) RETURN p
 
+import os
 import psycopg2
 
 con = psycopg2.connect(
-    host='localhost', database='ifg_produz_5',
-    user='postgres', password=1444
+    host=os.environ.get('host'), database=os.environ.get('database'),
+    user=os.environ.get('user'), password=os.environ.get('password')
 )
-    
+   
 cur = con.cursor()
 
 
